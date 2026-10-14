@@ -1,0 +1,5 @@
+require('dotenv').config();
+const bcrypt = require('bcryptjs');
+const { Sequelize, QueryTypes } = require('sequelize');
+const db = new Sequelize(process.env.DB_NAME || 'solarsphere', process.env.DB_USER || 'root', process.env.DB_PASSWORD || '', { host:process.env.DB_HOST||'127.0.0.1', port:Number(process.env.DB_PORT||3306), dialect:'mysql', logging:false });
+(async()=>{try{const [r]=await db.query("SELECT id FROM users WHERE role='admin' LIMIT 1",{type:QueryTypes.SELECT});if(r){console.log('An admin account already exists.');return;}const name=process.env.ADMIN_NAME||'SolarSphere Admin',email=(process.env.ADMIN_EMAIL||'admin@solarsphere.local').toLowerCase(),password=process.env.ADMIN_PASSWORD;if(!password||password.length<10)throw new Error('Set ADMIN_PASSWORD (at least 10 characters) in .env first.');await db.query('INSERT INTO users (name,email,phone,password_hash,role) VALUES (?,?,?,?,?)',{replacements:[name,email,'9000000000',await bcrypt.hash(password,12),'admin']});console.log(`Admin account created: ${email}`);}catch(e){console.error(e.message);process.exitCode=1;}finally{await db.close();}})();

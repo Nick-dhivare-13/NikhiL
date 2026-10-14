@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102e50">
+  <meta name="description" content="Follow the stages of a rooftop solar installation with the SolarSphere project tracker.">
+  <title>SolarSphere | Request Tracking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="sun-dot"></span> JALGAON SOLAR PLANNING · Illustrative estimates only <a href="index.html#calculator">Solar estimate <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="KVL Electrical home"><span class="brand-logo-window" aria-hidden="true"><img src="assets/kvl-electrical-logo.png" alt=""></span><span class="brand-wordmark">KVL Electrical<small>SOLAR INSTALLATION &amp; MANAGEMENT</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation"><a href="index.html#benefits">Why solar</a><a href="index.html#calculator">Estimator</a><a href="index.html#packages">Packages</a><a href="emi.html">EMI</a><a href="tracking.html" aria-current="page">Track request</a><a href="index.html#journal">Solar guide</a><a class="nav-cta" href="index.html#consult">Consultation <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section class="standalone-hero section-wrap">
+      <div class="eyebrow"><span class="eyebrow-line"></span> INSTALLATION JOURNEY · JALGAON</div>
+      <h1>Know what happens<br><em>at every step.</em></h1>
+      <p>Sign in and enter the reference from one of your saved quote requests to view its current status.</p>
+      <div class="notice-pill"><span>i</span> This page tracks requests saved in your local SolarSphere account.</div>
+    </section>
+    <section class="standalone-content section-wrap tracking-content">
+      <div class="tracking-search-card">
+        <div><span class="card-kicker">PROJECT STATUS LOOKUP</span><h2>Find your request</h2><p>Submit a sample quote request after signing in, then use its reference code here.</p><a class="text-link" href="quotes.html">View all my requests →</a></div>
+        <form id="tracking-form" class="tracking-form" novalidate><label class="field"><span>Project reference</span><input id="tracking-id" type="text" placeholder="e.g. JLG-26-001" autocomplete="off" aria-describedby="tracking-help"></label><button class="button button-orange" type="submit">View progress <span>→</span></button><small id="tracking-help" class="form-message" aria-live="polite"></small></form>
+      </div>
+      <section class="tracking-result" id="tracking-result" aria-live="polite" aria-labelledby="tracking-result-title" hidden></section>
+      <section class="tracking-process"><div class="tracking-process-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE INSTALLATION PROCESS</div><h2>From enquiry to<br><em>switch-on.</em></h2></div><p>Each project may take a different path. A real tracker should show updates from the installer or project team.</p></div><div class="process-grid" id="process-grid"></div></section>
+      <div class="formula-note"><span class="tiny-star">✳</span><p><strong>About project tracking</strong><br>Request records and status updates are stored in the local MySQL database. This sample status does not mean an actual installation is booked.</p></div>
+      <a class="text-link tracking-back-link" href="index.html#home">← Back to SolarSphere home</a>
+    </section>
+  </main>
+  <footer class="site-footer standalone-footer"><div class="footer-bottom"><span>© 2026 SolarSphere · Jalgaon</span><span>Illustrative request journey <b>✳</b></span></div></footer>
+  <button class="lusi-launcher" id="lusi-open" type="button" aria-haspopup="dialog" aria-controls="lusi-backdrop"><span class="lusi-launcher-icon">L</span><span>Ask Lusi<small>Solar questions</small></span></button>
+  <div class="lusi-backdrop" id="lusi-backdrop" hidden>
+    <section class="lusi-dialog" id="lusi-dialog" role="dialog" aria-modal="true" aria-labelledby="lusi-title" aria-describedby="lusi-intro">
+      <header class="lusi-header"><div class="lusi-avatar">L</div><div class="lusi-header-copy"><small>SOLARSPHERE GUIDE</small><h2 id="lusi-title">Hi, I'm Lusi.</h2></div><button class="lusi-close" id="lusi-close" type="button" aria-label="Close Lusi">×</button></header>
+      <p class="lusi-intro" id="lusi-intro">Choose a question to see a prepared answer. Lusi uses project information and is not connected to a live AI service.</p>
+      <div class="lusi-questions" id="lusi-questions" aria-label="Questions for Lusi"></div>
+      <div class="lusi-answer" id="lusi-answer" aria-live="polite"><span class="lusi-answer-hint">Your answer will appear here.</span></div>
+      <div class="lusi-footer"><span class="lusi-status-dot"></span> Prepared answers · No chat is saved or sent</div>
+    </section>
+  </div>
+  <script src="tracking.js"></script>
+  <script src="lusi.js"></script>
+</body>
+</html>

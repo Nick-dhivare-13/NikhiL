@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102e50">
+  <meta name="description" content="SolarSphere solar planning for Jalgaon, with a solar estimator, EMI calculator, and project tracking.">
+  <title>SolarSphere | Solar planning for Jalgaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="sun-dot"></span> JALGAON SOLAR PLANNING · Illustrative estimates only <a href="#calculator">Calculate solar potential <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="KVL Electrical home"><span class="brand-logo-window" aria-hidden="true"><img src="assets/kvl-electrical-logo.png" alt=""></span><span class="brand-wordmark">KVL Electrical<small>SOLAR INSTALLATION &amp; MANAGEMENT</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#benefits">Why solar</a><a href="#calculator">Estimator</a><a href="#packages">Packages</a><a href="offers.html">Sign in · Compare offers</a><a href="emi.html">EMI</a><a href="tracking.html">Track request</a><a href="#journal">Solar guide</a><a class="nav-cta" href="auth.html">Customer login <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> SOLAR INSTALLATION AND MANAGEMENT · JALGAON</div><h1>Your roof has a<br>brighter <em>future.</em></h1><p>Explore solar planning for Jalgaon. Estimate a system, compare sample package options, and follow a request from consultation to installation.</p><div class="hero-actions"><a class="button button-orange" href="#calculator">Calculate solar potential <span>↗</span></a><a class="text-link" href="offers.html"><span class="play-icon">↗</span> Sign in to view packages</a></div><div class="hero-proof"><div class="hero-symbol">KVL</div><div><strong>Solar planning for homes<br>and small businesses.</strong><small>Estimates use clearly stated assumptions.</small></div></div></div>
+      <div class="hero-art photo-art">
+        <img class="hero-photo" src="assets/solar-rooftop.png" alt="Rooftop solar panels on a home in Jalgaon" fetchpriority="high">
+        <div class="photo-shade"></div>
+        <div class="floating-card photo-fact"><span class="mini-icon">☀</span><div><small>START WITH YOUR ROOF</small><strong>Explore solar potential</strong></div></div>
+        
+      </div>
+      <div class="hero-side-label">LOCAL KNOW-HOW <span>·</span> LONG-TERM VALUE</div>
+    </section>
+    <section class="trust-strip"><div><strong>Jalgaon-focused</strong><span>Jalgaon city focus</span></div><div><strong>Clear assumptions</strong><span>See how estimates are formed</span></div><div><strong>Easy to extend</strong><span>Ready for verified data later</span></div><div class="trust-badge"><span>✳</span> SOLAR<br>OPTIONS</div></section>
+    <section class="benefits section-wrap" id="benefits"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> A BETTER KIND OF POWER</div><h2>Good energy changes<br><em>everything.</em></h2></div><p>Solar is more than panels on a roof. It is a little more freedom, a little less uncertainty, and a lighter footprint for the people who come after us.</p></div><div class="benefit-grid"><article class="benefit-card benefit-main"><div class="benefit-icon orange-icon">₹</div><span class="card-number">01 / YOUR WALLET</span><h3>Keep more of<br>what you earn.</h3><p>Generate your own power and make those monthly electricity bills feel a little less heavy.</p><a href="#calculator" class="card-arrow" aria-label="Try the savings calculator">↗</a><div class="sun-lines"></div></article><article class="benefit-card"><div class="benefit-icon blue-icon">⌂</div><span class="card-number">02 / YOUR HOME</span><h3>More control.<br>Fewer surprises.</h3><p>Put a dependable source of energy to work right above your head.</p></article><article class="benefit-card"><div class="benefit-icon green-icon">✳</div><span class="card-number">03 / YOUR PLANET</span><h3>A lighter<br>kind of living.</h3><p>Choose cleaner energy and make a practical difference, one sunny day at a time.</p></article></div><div class="benefit-foot"><span class="tiny-star">✳</span><p><strong>Every home is different.</strong> Your estimate should be too. Use our calculator for a starting point tailored to your roof and electricity bill.</p><a href="#calculator">See what works for me <span>→</span></a></div></section>
+    <section class="calculator-section" id="calculator"><div class="calculator-grid"><div class="calculator-intro"><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> A GOOD PLACE TO START</div><h2>See what the<br>sun could <em>save.</em></h2><p>Enter sample property details to see how a personalized estimate could look. This estimate uses sample assumptions, not live Jalgaon measurements.</p><div class="calc-note"><span>✳</span><p><strong>Illustrative assumptions are visible.</strong><br>Panel size, output, electricity value, and system cost are illustrative values for this estimator.</p></div><div class="calc-steps"><span class="step-active"><b>01</b> YOUR PROPERTY</span><i></i><span><b>02</b> YOUR ESTIMATE</span></div></div><div class="calculator-card"><div class="calc-card-top"><div><span class="card-kicker">ILLUSTRATIVE SOLAR CHECK</span><h3>Your sample estimate.</h3></div><span class="calc-sun">☼</span></div><form id="solar-form" novalidate><div class="field-row"><label class="field"><span>Usable roof area <small>square feet</small></span><div class="input-wrap"><input id="roofArea" name="roofArea" type="number" min="1" max="100000" placeholder="e.g. 500" required><span>sq. ft.</span></div><small class="field-error" id="roofArea-error"></small></label><label class="field"><span>Average daily sunlight</span><div class="input-wrap"><input id="sunHours" name="sunHours" type="number" min="1" max="12" step="0.5" value="5" required><span>hours</span></div><small class="field-error" id="sunHours-error"></small></label></div><div class="field-row"><label class="field"><span>Monthly electricity bill</span><div class="input-wrap"><span class="prefix">₹</span><input id="monthlyBill" name="monthlyBill" type="number" min="1" max="10000000" placeholder="e.g. 2,500" required></div><small class="field-error" id="monthlyBill-error"></small></label><label class="field"><span>Estimated investment budget</span><div class="input-wrap"><span class="prefix">₹</span><input id="budget" name="budget" type="number" min="1" max="100000000" placeholder="e.g. 1,85,000" required></div><small class="field-error" id="budget-error"></small></label></div><button class="button button-orange calculate-button" type="submit">Show my estimate <span>→</span></button><p class="form-privacy"><span>▣</span> Illustrative sample values · Not a vendor quote.</p></form><div id="calculator-result" class="calculator-result" aria-live="polite" hidden></div></div></div><div class="calc-bottom"><span>JALGAON SOLAR PLANNING · SAMPLE VALUES</span><span>Illustrative values · No live rates <b>✳</b></span></div></section>
+    <section class="sample-packages section-wrap" id="packages"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ILLUSTRATIVE OPTIONS · NOT QUOTES</div><h2>Three ways to<br><em>picture solar.</em></h2></div><p>These public examples are for planning only. Sign in to compare the editable fictional company catalogue and submit a sample package request.</p></div><div class="sample-package-grid" id="sample-packages"></div><p class="sample-disclaimer">Package names, details, and prices are illustrative. No current vendor prices, official tariffs, or subsidy amounts are included. <a href="offers.html">Sign in to compare all sample offers and request a quote →</a></p></section>
+    <section class="stories section-wrap" id="stories">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> SOLAR AT HOME</div><h2>See solar<br><em>in daily life.</em></h2></div>
+        <p>These supplied visuals illustrate home energy use and an installation journey. They are for information only, not customer case studies.</p>
+      </div>
+      <div class="story-grid">
+        <article class="story-feature visual-story">
+          <div class="story-photo"><img src="assets/solar-savings-home.png" alt="Illustration of a household, rooftop solar, air conditioning, and an electricity bill" loading="lazy"></div>
+          <div class="story-copy"><span class="story-kicker">HOUSEHOLD ENERGY</span><h3>How can a household explore its solar potential?</h3><p>Start with your roof, sunlight, and electricity bill to create an illustrative estimate.</p><a href="#calculator">Try the solar estimator <span>→</span></a></div>
+        </article>
+        <article class="story-small visual-story">
+          <div class="story-photo"><img src="assets/solar-home-installation.png" alt="Solar installation team working on a rooftop while a family checks an energy display" loading="lazy"></div>
+          <div class="story-copy"><span class="story-kicker">THE INSTALLATION JOURNEY</span><h3>What happens between planning and switching on?</h3><p>Follow a sample installation journey, from site review through installation and handover.</p><a href="tracking.html">View request stages <span>→</span></a></div>
+        </article>
+      </div>
+    </section>
+    <section class="journal section-wrap" id="journal">
+      <div class="journal-title"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE SUN, EXPLAINED</div><h2>A little more<br><em>solar savvy.</em></h2></div><a href="#consult" class="text-link">Ask us anything <span>↗</span></a></div>
+      <div class="journal-grid">
+        <article class="journal-card journal-one"><div class="journal-art"><img class="journal-photo" src="assets/solar-rooftop.png" alt="Sunlight over a rooftop solar array" loading="lazy"></div><div class="journal-meta"><span>THE BASICS</span><span>4 MIN READ</span></div><h3>What actually happens when sunlight hits your roof?</h3><a href="#consult" aria-label="Ask us how solar works">Read the guide <span>→</span></a></article>
+        <article class="journal-card journal-two"><div class="journal-art"><img class="journal-photo" src="assets/solar-installation.png" alt="Technicians installing rooftop solar panels" loading="lazy"></div><div class="journal-meta"><span>INSTALLATION</span><span>5 MIN READ</span></div><h3>What should you expect during a solar installation?</h3><a href="tracking.html">Explore the process <span>→</span></a></article>
+        <article class="journal-card journal-three"><div class="journal-art"><img class="journal-photo" src="assets/kvl-office.png" alt="KVL Electrical solar company office reception" loading="lazy"></div><div class="journal-meta"><span>PLANNING</span><span>3 MIN READ</span></div><h3>What questions should you ask before choosing solar?</h3><a href="#consult">Talk through the basics <span>→</span></a></article>
+        <article class="journal-card journal-four"><div class="journal-art"><img class="journal-photo journal-photo-portrait" src="assets/summer-home.png" alt="A home in the summer sun, illustrating hot weather energy use" loading="lazy"></div><div class="journal-meta"><span>SUMMER USE</span><span>4 MIN READ</span></div><h3>How can you plan for higher summer electricity use?</h3><a href="#calculator">Try your estimate <span>→</span></a></article>
+      </div>
+    </section>
+    <section class="consult-section" id="consult"><div class="consult-inner"><div class="consult-copy"><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> CUSTOMER PORTAL · JALGAON</div><h2>Ready to explore<br><em>your options?</em></h2><p>Create a customer account to compare sample companies and packages, then submit a request that you can track.</p><div class="consult-contact"><span class="contact-icon">↗</span><div><small>SOLARSPHERE · JALGAON</small><strong>Fictional sample data</strong><span>Use made-up personal details</span></div></div><div class="contact-hours"><span>✳</span> No real installer or subsidy data is connected.</div></div><div class="consult-card"><div class="consult-card-heading"><span class="card-kicker">SAVE AND TRACK YOUR REQUEST</span><h3>Sign in to continue.</h3><p>Login is required before viewing the company catalogue or submitting a quote request.</p></div><a class="button button-orange consult-button" href="auth.html">Sign in or create customer account <span>→</span></a><p class="form-privacy"><span>▣</span> Your sample details are saved to the local MySQL database.</p></div></div><div class="consult-sun">✳</div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="#home" aria-label="KVL Electrical home"><span class="brand-logo-window" aria-hidden="true"><img src="assets/kvl-electrical-logo.png" alt=""></span><span class="brand-wordmark">KVL Electrical<small>SOLAR INSTALLATION &amp; MANAGEMENT</small></span></a><p>Solar installation and management planning for Jalgaon.</p><div class="footer-note"><span>✳</span> No live installer or utility data is connected.</div><div class="footer-links"><div><small>EXPLORE</small><a href="#benefits">Why solar</a><a href="#calculator">Solar estimator</a><a href="#packages">Sample packages</a><a href="offers.html">Sign in · Compare offers</a></div><div><small>TOOLS &amp; ACCOUNT</small><a href="emi.html">EMI calculator</a><a href="tracking.html">Track my request</a><a href="quotes.html">My quote requests</a><a href="#stories">Solar at home</a><a href="admin.html">Admin panel</a></div></div></div><div class="footer-bottom"><span>© 2026 SolarSphere · Jalgaon</span><span>Illustrative values · Not an installation quote <b>✳</b></span></div></footer>
+  <button class="promo-launcher" id="promo-open" type="button" aria-haspopup="dialog" aria-controls="promo-backdrop"><span class="promo-launcher-icon">▶</span><span>Watch solar videos<small>Two short clips</small></span></button>
+  <div class="promo-backdrop" id="promo-backdrop" hidden>
+    <section class="promo-dialog" id="promo-dialog" role="dialog" aria-modal="true" aria-labelledby="promo-title" aria-describedby="promo-copy" tabindex="-1">
+      <header class="promo-header">
+        <div><span class="promo-kicker">KVL ELECTRICAL · SOLAR VIDEO</span><h2 id="promo-title">A brighter way to power home.</h2></div>
+        <button class="promo-close" id="promo-close" type="button" aria-label="Close video">×</button>
+      </header>
+      <p class="promo-copy" id="promo-copy">Choose a clip to watch. It starts muted; use the player controls to turn on sound.</p>
+      <video class="promo-player" id="promo-player" src="assets/kvl-video-one.mp4" controls muted playsinline preload="metadata" poster="assets/solar-rooftop.png" aria-label="Solar video clip"></video>
+      <div class="promo-controls">
+        <div class="promo-picker" role="group" aria-label="Choose a video clip">
+          <button class="promo-choice is-active" type="button" data-promo-src="assets/kvl-video-one.mp4" aria-pressed="true">Clip 1</button>
+          <button class="promo-choice" type="button" data-promo-src="assets/kvl-video-two.mp4" aria-pressed="false">Clip 2</button>
+        </div>
+        <a class="promo-cta" id="promo-estimate" href="#calculator">Explore solar estimate <span>→</span></a>
+      </div>
+      <p class="promo-note">Solar video preview · No external ad service</p>
+    </section>
+  </div>
+  <button class="lusi-launcher" id="lusi-open" type="button" aria-haspopup="dialog" aria-controls="lusi-backdrop"><span class="lusi-launcher-icon">L</span><span>Ask Lusi<small>Solar questions</small></span></button>
+  <div class="lusi-backdrop" id="lusi-backdrop" hidden>
+    <section class="lusi-dialog" id="lusi-dialog" role="dialog" aria-modal="true" aria-labelledby="lusi-title" aria-describedby="lusi-intro">
+      <header class="lusi-header"><div class="lusi-avatar">L</div><div class="lusi-header-copy"><small>SOLARSPHERE GUIDE</small><h2 id="lusi-title">Hi, I'm Lusi.</h2></div><button class="lusi-close" id="lusi-close" type="button" aria-label="Close Lusi">×</button></header>
+      <p class="lusi-intro" id="lusi-intro">Choose a question to see a prepared answer. Lusi uses project information and is not connected to a live AI service.</p>
+      <div class="lusi-questions" id="lusi-questions" aria-label="Questions for Lusi"></div>
+      <div class="lusi-answer" id="lusi-answer" aria-live="polite"><span class="lusi-answer-hint">Your answer will appear here.</span></div>
+      <div class="lusi-footer"><span class="lusi-status-dot"></span> Prepared answers · No chat is saved or sent</div>
+    </section>
+  </div>
+  <script src="site-config.js"></script>
+  <script src="script.js"></script>
+  <script src="lusi.js"></script>
+  <script src="promo-video.js"></script>
+</body>
+</html>

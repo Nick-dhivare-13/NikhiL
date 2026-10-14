@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102e50">
+  <meta name="description" content="Estimate monthly payments for a solar system with the SolarSphere EMI calculator.">
+  <title>SolarSphere | Solar EMI Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="sun-dot"></span> JALGAON SOLAR PLANNING · Illustrative estimates only <a href="index.html#calculator">Solar estimate <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="KVL Electrical home"><span class="brand-logo-window" aria-hidden="true"><img src="assets/kvl-electrical-logo.png" alt=""></span><span class="brand-wordmark">KVL Electrical<small>SOLAR INSTALLATION &amp; MANAGEMENT</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation"><a href="index.html#benefits">Why solar</a><a href="index.html#calculator">Estimator</a><a href="index.html#packages">Packages</a><a href="emi.html" aria-current="page">EMI</a><a href="tracking.html">Track request</a><a href="index.html#journal">Solar guide</a><a class="nav-cta" href="index.html#consult">Consultation <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section class="standalone-hero section-wrap">
+      <div class="eyebrow"><span class="eyebrow-line"></span> SOLAR FINANCE PLANNER · JALGAON</div>
+      <h1>Plan your monthly<br><em>solar payment.</em></h1>
+      <p>Adjust the sample system cost, down payment, interest rate, and loan period to explore an illustrative EMI.</p>
+      <div class="notice-pill"><span>i</span> Example calculation only · Not a bank or lender offer</div>
+    </section>
+    <section class="standalone-content section-wrap">
+      <div class="emi-layout">
+        <form class="tool-card emi-form" id="emi-form" novalidate>
+          <div class="tool-card-heading"><span class="card-kicker">EDIT THE EXAMPLE</span><h2>Loan details</h2><p>Replace the starting values with figures you want to explore.</p></div>
+          <label class="field"><span>Illustrative system price</span><div class="input-wrap"><span class="prefix">₹</span><input id="system-price" type="number" min="1" max="100000000" value="187500" required></div><small class="field-error" id="system-price-error"></small></label>
+          <label class="field"><span>Down payment</span><div class="input-wrap"><span class="prefix">₹</span><input id="down-payment" type="number" min="0" max="100000000" value="37500" required></div><small class="field-error" id="down-payment-error"></small></label>
+          <div class="field-row">
+            <label class="field"><span>Annual interest rate</span><div class="input-wrap"><input id="interest-rate" type="number" min="0" max="50" step="0.1" value="10" required><span>% p.a.</span></div><small class="field-error" id="interest-rate-error"></small></label>
+            <label class="field"><span>Loan period</span><div class="input-wrap"><input id="loan-months" type="number" min="1" max="360" step="1" value="60" required><span>months</span></div><small class="field-error" id="loan-months-error"></small></label>
+          </div>
+          <button class="button button-orange calculate-button" type="submit">Calculate sample EMI <span>→</span></button>
+          <p class="form-privacy"><span>▣</span> No lender, loan product, or subsidy data is connected.</p>
+        </form>
+        <section class="tool-card emi-result-card" aria-live="polite" aria-labelledby="emi-result-title">
+          <div class="tool-card-heading"><span class="card-kicker">YOUR ESTIMATE</span><h2 id="emi-result-title">Monthly payment</h2><p>Illustrative result from the values entered on this page.</p></div>
+          <div class="emi-primary"><span>Estimated monthly EMI</span><strong id="emi-monthly">₹—</strong><small id="emi-term">Enter loan details and calculate.</small></div>
+          <div class="emi-metrics"><div><span>Amount financed</span><strong id="emi-principal">₹—</strong></div><div><span>Total interest</span><strong id="emi-interest">₹—</strong></div><div><span>Total paid including down payment</span><strong id="emi-total">₹—</strong></div></div>
+          <p class="emi-disclaimer">This is a mathematical illustration using a fixed annual interest rate and monthly repayments. Actual lender eligibility, fees, interest method, and terms may differ. No loan or financing recommendation is being made.</p>
+          <a class="text-link emi-back-link" href="index.html#calculator">← Back to solar estimate</a>
+        </section>
+      </div>
+      <div class="formula-note"><span class="tiny-star">✳</span><p><strong>How it is calculated</strong><br>EMI uses the standard reducing-balance formula. At 0% interest, the financed amount is divided evenly across the selected months.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer standalone-footer"><div class="footer-bottom"><span>© 2026 SolarSphere · Jalgaon</span><span>Illustrative planning tool <b>✳</b></span></div></footer>
+  <button class="lusi-launcher" id="lusi-open" type="button" aria-haspopup="dialog" aria-controls="lusi-backdrop"><span class="lusi-launcher-icon">L</span><span>Ask Lusi<small>Solar questions</small></span></button>
+  <div class="lusi-backdrop" id="lusi-backdrop" hidden>
+    <section class="lusi-dialog" id="lusi-dialog" role="dialog" aria-modal="true" aria-labelledby="lusi-title" aria-describedby="lusi-intro">
+      <header class="lusi-header"><div class="lusi-avatar">L</div><div class="lusi-header-copy"><small>SOLARSPHERE GUIDE</small><h2 id="lusi-title">Hi, I'm Lusi.</h2></div><button class="lusi-close" id="lusi-close" type="button" aria-label="Close Lusi">×</button></header>
+      <p class="lusi-intro" id="lusi-intro">Choose a question to see a prepared answer. Lusi uses project information and is not connected to a live AI service.</p>
+      <div class="lusi-questions" id="lusi-questions" aria-label="Questions for Lusi"></div>
+      <div class="lusi-answer" id="lusi-answer" aria-live="polite"><span class="lusi-answer-hint">Your answer will appear here.</span></div>
+      <div class="lusi-footer"><span class="lusi-status-dot"></span> Prepared answers · No chat is saved or sent</div>
+    </section>
+  </div>
+  <script src="site-config.js"></script>
+  <script src="emi.js"></script>
+  <script src="lusi.js"></script>
+</body>
+</html>
